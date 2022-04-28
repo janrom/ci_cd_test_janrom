@@ -10,7 +10,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    permissions:
+      issues: write
     steps:
       - name: Check Out Repo
         uses: actions/checkout@v3
