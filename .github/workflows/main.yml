@@ -43,8 +43,7 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: ghcr.io/${{ github.repository_owner }}/ci_cd_test_janrom:latest
-          if: steps.cache.outputs.cache-hit == 'true'
-            cache-from: type=local,src=/tmp/.buildx-cache
+          cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
       -
         name: Image digest
